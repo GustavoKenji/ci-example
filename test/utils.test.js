@@ -13,5 +13,10 @@ describe('Utils', () => {
             expect(acharCaracter(-4, 'abcde', 'c'))
                 .toBe('Comprimento inválido');
         });
+
+        test("comprimento invalido", () => {
+          expect(acharCaracter(10, "abcd", "b"))
+            .toBe("Comprimento inválido");
+        });
     });    
 });
