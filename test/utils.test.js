@@ -30,7 +30,7 @@ describe('Utils', () => {
                 .toBe('Comprimento inválido');
         });
 
-        test("comprimento invalido", () => {
+        test("comprimento diferente do real", () => {
           expect(acharCaracter(10, "abcd", "b")).toBe(
             "comprimento fornecido diferente do comprimento real"
           );
@@ -41,8 +41,13 @@ describe('Utils', () => {
             "caracter não encontrado"
           );
         });
+
         test("deve retornar posicao do caractere", () => {
           expect(acharCaracter(7, "adcgcba", "g")).toBe(3);
+        });
+
+        test("retornando posicoes dos caracteres com mais de uma ocorrencia", () => {
+          expect(acharCaracter(7, "adcdcba", "d")).toBe(1,3);
         });
     });    
 });
