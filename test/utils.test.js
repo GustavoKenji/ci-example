@@ -11,7 +11,7 @@ describe('Utils', () => {
     describe('acharCaracter', () => {
         test('comprimento invalido', () => {
             expect(acharCaracter(-4, 'abcde', 'c'))
-                .toBe('comprimento invalido');
+                .toBe('Comprimento inválido');
         });
     });    
 });
