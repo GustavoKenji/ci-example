@@ -30,9 +30,19 @@ describe('Utils', () => {
                 .toBe('Comprimento inválido');
         });
 
-        // test("comprimento invalido", () => {
-        //   expect(acharCaracter(10, "abcd", "b"))
-        //     .toBe("Comprimento inválido");
-        // });
+        test("comprimento invalido", () => {
+          expect(acharCaracter(10, "abcd", "b")).toBe(
+            "comprimento fornecido diferente do comprimento real"
+          );
+        });
+
+        test("caractere nao encontrado na cadeia", () => {
+          expect(acharCaracter(7, "azbycxd", "g")).toBe(
+            "caracter não encontrado"
+          );
+        });
+        test("deve retornar posicao do caractere", () => {
+          expect(acharCaracter(7, "adcgcba", "g")).toBe(3);
+        });
     });    
 });
